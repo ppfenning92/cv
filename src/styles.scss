@@ -1,0 +1,48 @@
+@use "sass:map";
+@use "src/_colors";
+@import "./_typography";
+
+:root {
+  --clr-brand: #{map.get(colors.$colors, "brand")};
+  --clr-warning: #{map.get(colors.$colors, "warning")};
+  --clr-accent: #{map.get(colors.$colors, "accent")};
+}
+* {
+  box-sizing: border-box;
+  padding: unset;
+  margin: unset;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  line-height: 1.7;
+}
+
+header,
+section {
+  padding: 1rem;
+}
+img {
+  line-height: 1;
+}
+a {
+  text-decoration: none;
+}
+body {
+
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+
+  [role=history] {
+    flex: 3
+  }
+}
+
+

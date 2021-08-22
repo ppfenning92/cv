@@ -1,0 +1,25 @@
+@use "sass:map";
+
+
+$hue: (
+        "brand": 1,
+        "warning": 200,
+        "accent": 0
+);
+
+$saturation: (
+        "brand": 50%,
+        "warning": 50%,
+        "accent": 0%
+);
+
+$lightness: (
+        "brand": 50%,
+        "warning": 50%,
+        "accent": 8%
+);
+$colors: (
+        "brand": hsla(map.get($hue, "brand"), map.get($saturation, "brand"), map.get($lightness, "brand"), .99),
+        "warning": hsla(map.get($hue, "warning"), map.get($saturation, "warning"), map.get($lightness, "warning"), .99),
+        "accent": hsla(map.get($hue, "accent"), map.get($saturation, "accent"), map.get($lightness, "accent"), .9)
+);
