@@ -1,0 +1,11 @@
+@use "colors";
+
+@mixin reset() {
+  text-decoration: none;
+  cursor: pointer;
+  color: colors.$clr-text;
+}
+
+a {
+  @include reset();
+}

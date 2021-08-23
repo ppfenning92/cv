@@ -23,3 +23,7 @@ $colors: (
         "warning": hsla(map.get($hue, "warning"), map.get($saturation, "warning"), map.get($lightness, "warning"), .99),
         "accent": hsla(map.get($hue, "accent"), map.get($saturation, "accent"), map.get($lightness, "accent"), .9)
 );
+
+$clr-text: #000;
+$blueish: #005870;
+$reddish: #9a3356

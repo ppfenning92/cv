@@ -1,30 +1,31 @@
 import m from "mithril";
 import "./splash.component.scss"
 
-let count = 0; // added a variable
 
 export const Splash: m.Component = {
     view: function () {
-        return m("main", {
-            class: 'main'
+        return m("div",{
+            class: 'splash',
         }, [
             m(
                 "h1",
                 {
                     class: "title",
                 },
-                "My first app"
-            ),
-            m(
-                "button",
+                "Patrick"
+            ),m(
+                "h3",
                 {
-                    onclick: function () {
-                        count++;
-                    },
+                    class: "subtitle",
                 },
-                count + " clicks"
+                "Lorem ipsum * 3"
             ),
-        m("a", {href: "#!/main"}, "Enter!")
+            m("a", {
+                id: 'enter',
+                class: ['cta cta--splash'],
+                role: 'button',
+                href: "#!/me"
+            }, "Enter!"),
         ]);
 
     },

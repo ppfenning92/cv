@@ -29,7 +29,7 @@ export const Content: m.Component = {
                 id: 'main',
                 class: 'main'
             },
-            ''
+            'sdf'
 
         )
     }
