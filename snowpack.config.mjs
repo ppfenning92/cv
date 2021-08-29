@@ -15,7 +15,8 @@ export default {
       '@snowpack/plugin-sass',
       {
         style: 'compressed',
-        loadPath: ['**/*.scss']
+        loadPath: ['**/*.scss'],
+        embedSourceMap: true
       }
     ],
     [

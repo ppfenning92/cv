@@ -48,7 +48,11 @@ const socials: ISocial[] = [
         name: 'GitHub',
         iconPath: '/assets/img/gh.png',
         link: 'https://github.com/ppfenning92'
-    },
+    }, {
+        name: 'twitter',
+        iconPath: '/assets/img/cp-black.png',
+        link: 'https://twitter.com/PPfenning92'
+    }
 ]
 export const Socials: m.Component = {
     view: () => {

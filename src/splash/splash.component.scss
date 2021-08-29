@@ -1,5 +1,6 @@
 @use 'src/utils/scss/flex-center' as fc;
 @use "src/utils/scss/colors" as clr;
+
 main {
   width: 100vw;
   height: 100vh;
@@ -30,6 +31,8 @@ main {
     padding: 2vw 4vw;
     outline: 1px solid currentColor;
     font-weight: 400;
+    transition: color 225ms ease-in-out,
+    background-color 225ms ease-in-out;
 
     &:hover {
       color: white;

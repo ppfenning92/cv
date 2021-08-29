@@ -1,35 +1,38 @@
 import "./styles.scss";
 
-import m from "mithril";
+import m, {_NoLifecycle, Vnode, VnodeDOM} from "mithril";
 import {Splash} from "./splash/splash.component";
-import {Profile, Content, Lorem} from "./profile/profile.component";
-import Mithril from "mithril";
+import {Profile, Content,
+
+    // Lorem
+} from "./profile/profile.component";
+// import Mithril from "mithril";
 import {EmptyLayout} from "./layouts/empty/empty.component";
 import {FocusLayout} from "./layouts/focus/focus.component";
 
 const root = document.body;
 
-export const Main: m.Component = {
-    oncreate: (vnode: Mithril.VnodeDOM<{}, Mithril._NoLifecycle<this>>): any => {
+export class Main implements m.Component  {
+    public oncreate(vnode: VnodeDOM<{}, _NoLifecycle<this>>): any  {
         console.log(vnode)
-    },
-    oninit: (vnode: Mithril.Vnode<{}, Mithril._NoLifecycle<this>>): any => {
+    };
+    public oninit (vnode: Vnode<{}, _NoLifecycle<this>>): any  {
         // console.log(document.querySelector('#main'), 'cv', {
         //     '/main/cv': Lorem
         // });
-    },
-    view: () => {
+    };
+    public view() {
         return m.render(root,
             [
                 m(Profile),
                 m(Content)
             ]
         );
-    },
-};
+    };
+}
 
 const Layout: m.Component = {
-    view: (vnode) =>m("main.layout", [
+    view: (vnode) => m("main.layout", [
         m("nav.menu", [
             m(m.route.Link, {href: "/main"}, "main"),
             m(m.route.Link, {href: "/test"}, "test"),
@@ -40,17 +43,13 @@ const Layout: m.Component = {
     ])
 }
 
-const List: m.Component = {
-    oncreate: (vnode: Mithril.VnodeDOM<{}, Mithril._NoLifecycle<this>>): any => {
-        console.log(vnode)
-    },
-    oninit: (vnode: Mithril.Vnode<{}, Mithril._NoLifecycle<this>>): any => {
-        console.warn(vnode)
-
-    },
-    view: (vnode) => m('div.test', JSON.stringify(vnode.attrs))
-
-}
+// class List implements m.Component {
+//
+//     public view(vnode) {
+//         m('div.test', JSON.stringify(vnode.attrs))
+//     }
+//
+// }
 
 
 m.route(root, "/a", {
@@ -60,15 +59,15 @@ m.route(root, "/a", {
     "/me": {
         render: (vnode) => m(FocusLayout, m('div.test'))
     },
-    "/test": {
-        render: function() {
-            return m(Layout, m(List, {}))
-        }
-    },
-    "/test/:id": {
-        render: function(vnode) {
-            return m(Layout, {active: 1}, m(List, vnode.attrs))
-        }
-    },
+    // "/test": {
+    //     render: function () {
+    //         return m(Layout, m(List, {}))
+    //     }
+    // },
+    // "/test/:id": {
+    //     render: function (vnode) {
+    //         return m(Layout, {active: 1}, m(List, vnode.attrs))
+    //     }
+    // },
 });
 

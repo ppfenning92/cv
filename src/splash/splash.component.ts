@@ -1,5 +1,6 @@
 import m from "mithril";
-import "./splash.component.scss"
+import "./splash.component.scss";
+
 
 
 export const Splash: m.Component = {
@@ -22,10 +23,10 @@ export const Splash: m.Component = {
             ),
             m("a", {
                 id: 'enter',
-                class: ['cta cta--splash'],
+                class: 'cta cta--splash',
                 role: 'button',
                 href: "#!/me"
-            }, "Enter!"),
+            }, 'Enter!'),
         ]);
 
     },

@@ -18,6 +18,7 @@ $lightness: (
         "warning": 50%,
         "accent": 8%
 );
+
 $colors: (
         "brand": hsla(map.get($hue, "brand"), map.get($saturation, "brand"), map.get($lightness, "brand"), .99),
         "warning": hsla(map.get($hue, "warning"), map.get($saturation, "warning"), map.get($lightness, "warning"), .99),

@@ -17,9 +17,9 @@ export const Profile: m.Component = {
 const lorem = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. A alias atque dignissimos dolor dolore earum ex necessitatibus officiis, qui, quo sequi sit. Aperiam harum illo nulla obcaecati officiis tempore voluptate?'
 
 
-export const Lorem: m.Component<{n: number}> = {
-    view: ({attrs: {n}} = {attrs: {n: 10}}) => m('div', {}, Array.from(Array(n)).map(_ => m('p', {}, lorem)))
-}
+// export const Lorem: m.Component<{n: number}> = {
+//     view: ({attrs: {n}} = {attrs: {n: 10}}) => m('div', {}, Array.from(Array(n)).map(_ => m('p', {}, lorem)))
+// }
 
 export const Content: m.Component = {
     view: () => {
