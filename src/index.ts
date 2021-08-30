@@ -52,12 +52,12 @@ const Layout: m.Component = {
 // }
 
 
-m.route(root, "/a", {
-    "/a": {
+m.route(root, "/", {
+    "/": {
         render: (vnode) => m(EmptyLayout, m(Splash, vnode.attrs))
     },
     "/me": {
-        render: (vnode) => m(FocusLayout, m('div.test'))
+        render: (vnode) => m(FocusLayout, )
     },
     // "/test": {
     //     render: function () {

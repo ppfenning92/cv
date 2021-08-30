@@ -18,6 +18,6 @@ export class EmptyLayout implements Component {
     public onupdate(vnode: VnodeDOM<{}, _NoLifecycle<this>>): any {
     };
     public view(vnode: Vnode<{}, _NoLifecycle<this>>): Children | void | null {
-        return m('main', vnode.children);
+        return m('main.layout--empty', vnode.children);
     }
 }

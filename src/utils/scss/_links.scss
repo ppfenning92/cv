@@ -1,9 +1,9 @@
-@use "colors";
+@use "colors" as *;
 
 @mixin reset() {
   text-decoration: none;
   cursor: pointer;
-  color: colors.$clr-text;
+  color: $clr-text;
 }
 
 a {

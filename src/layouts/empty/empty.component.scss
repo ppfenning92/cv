@@ -1,1 +1,4 @@
-
+@use "src/utils/scss/colors" as *;
+main.layout--empty {
+  background-color: $reddish;
+}
