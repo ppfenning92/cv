@@ -8,6 +8,7 @@
         "target": "esnext",
         "moduleResolution": "node",
         "jsx": "preserve",
+        "esModuleInterop": true,
         "baseUrl": "./",
         /* paths - import rewriting/resolving */
         "paths": {

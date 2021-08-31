@@ -1,0 +1,17 @@
+.nav__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  list-style-type: none;
+  gap: 1rem;
+  background-color: rgba(black, .5);
+  &__item {
+    &__link {
+      text-decoration: none;
+      display: inline-block;
+      padding: 1rem  2rem;
+      color: black
+    }
+  }
+}
