@@ -2,11 +2,12 @@ main.layout--focus {
   background-color: #9a3356;
   display: grid;
   grid-template-rows: auto 1fr auto;
-
   color: white;
+
   a {
     color: white;
   }
+
   nav.main-nav, .page, footer {
     width: 100vw;
     max-width: 1400px;

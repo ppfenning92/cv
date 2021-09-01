@@ -29,7 +29,7 @@ class NavItem implements Component<INavItem> {
             m(m.route.Link,{
                 class: 'nav__list__item__link',
                 href: vnode.attrs.url,
-                tabindex: vnode.attrs.idx + 1 ?? 0
+                tabindex: (vnode.attrs.idx ?? -1) + 1
             }, vnode.attrs.text)
         ]);
     }

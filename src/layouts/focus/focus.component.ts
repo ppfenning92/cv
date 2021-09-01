@@ -1,6 +1,14 @@
 import m, {_NoLifecycle, Children, Component, Vnode} from 'mithril';
 // import Mithril from "mithril";
-import './focus.component.scss';
+import './focus.component.scss' ;
+// @ts-ignore
+// import sheet from'./focus.component.css' assert {type: 'css'};
+// const sheet = await import('./focus.component.scss', {
+//     assert: {type: 'css'}
+// })
+// const sheet = await import('./focus.component.scss')
+// console.log(sheet.default)
+// document.adoptedStyleSheets  = [sheet]
 import {MainNav} from "../../main-nav/main-nav.component";
 
 
