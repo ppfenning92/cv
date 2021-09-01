@@ -6,12 +6,14 @@
     <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Web site created using create-snowpack-app" />
+    <link rel="manifest" href="manifest.json">
+    <%= htmlWebpackPlugin.files.css[css]
     <title>Patrick Pfenning</title>
 </head>
 
 <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <script type="module" src="/dist/index.js" defer></script>
+    <%= htmlWebpackPlugin.files.js[js]
 </body>
 
 </html>

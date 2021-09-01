@@ -2,7 +2,7 @@ const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const TerserPlugin = require("terser-webpack-plugin");
-
+const {WebpackManifestPlugin} = require('webpack-manifest-plugin');
 console.log(process.env.mode)
 module.exports = (env, argv) => ({
     entry: './src/index.ts',
@@ -21,7 +21,7 @@ module.exports = (env, argv) => ({
                     {
                         loader: 'file-loader',
                         options: {
-                            name: '[path][name].[contenthash].[ext]',
+                            name: '[path][name].[ext]',
                             context: path.resolve(__dirname, "src/"),
                             outputPath: 'dist/assets',
                             publicPath: '../',
@@ -82,14 +82,17 @@ module.exports = (env, argv) => ({
             filename: "[name].[contenthash].css",
             chunkFilename: "[id].css",
         }),
-        new HtmlWebpackPlugin({
-            title: 'Output Management',
-        }),
+        new HtmlWebpackPlugin(
+            // {
+            // template: 'index.html'
+            // }
+        ),
         new TerserPlugin({
             terserOptions: {
                 compress: argv.mode === 'production' // only if `--mode production` was passed
             }
-        })
+        }),
+        new WebpackManifestPlugin({})
     ],
     resolve: {
         extensions: ['.tsx', '.ts', '.js'],
