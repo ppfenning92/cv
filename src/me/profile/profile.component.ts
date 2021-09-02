@@ -1,5 +1,5 @@
 import m from "mithril";
-import {Socials, Me} from "./me/me.component";
+import {Socials, Me} from "../me.component";
 import './profile.component.scss'
 
 export const Profile: m.Component = {

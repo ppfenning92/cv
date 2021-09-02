@@ -7,6 +7,12 @@
   gap: 1rem;
   background-color: rgba(black, .5);
   &__item {
+    background-color: rgba(0,0,0,0);
+    transition: background-color 250ms ease-in-out;
+    &--active {
+      background-color: rgba(255,255,255,.11);
+    }
+
     &__link {
       text-decoration: none;
       display: inline-block;

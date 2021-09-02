@@ -24,8 +24,13 @@ export const Me: m.Component = {
                 ),
                 m('img', {
                     id: 'profilePicture',
-                    class: 'image',
-                    src: 'https://unsplash.it/800'
+                    width: 225,
+                    height: 225,
+                    class: 'image skeleton',
+                    src: 'https://unsplash.it/800',
+                    onload: (event: Event & { target: Element }) => {
+                        event.target.classList.remove('skeleton')
+                    }
                 })
             ])
     }

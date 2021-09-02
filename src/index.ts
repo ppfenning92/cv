@@ -5,10 +5,11 @@ import {Splash} from "./splash/splash.component";
 import {Profile, Content,
 
     // Lorem
-} from "./profile/profile.component";
+} from "./me/profile/profile.component";
 // import Mithril from "mithril";
 import {EmptyLayout} from "./layouts/empty/empty.component";
 import {FocusLayout} from "./layouts/focus/focus.component";
+import {Me} from "./me/me.component";
 
 const root = document.body;
 
@@ -57,7 +58,13 @@ m.route(root, "/", {
         render: (vnode) => m(EmptyLayout, m(Splash, vnode.attrs))
     },
     "/me": {
-        render: (vnode) => m(FocusLayout, )
+        render: (vnode) => m(FocusLayout, m(Me))
+    },
+    "/cv": {
+        render: (vnode) => m(FocusLayout, m('div', '/cv'))
+    },
+    "/io": {
+        render: (vnode) => m(FocusLayout, m('div', '/io'))
     },
     // "/test": {
     //     render: function () {

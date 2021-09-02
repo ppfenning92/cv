@@ -13,7 +13,7 @@
   background-size: 0 2px;
   background-repeat: no-repeat;
   background-position: left bottom;
-  transition: background-size 250ms linear;
+  transition: background-size 250ms ease-in-out;
   &:hover, &:focus {
     background-size: 100% 2px;
   }
