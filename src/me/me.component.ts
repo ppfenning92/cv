@@ -27,7 +27,7 @@ export const Me: m.Component = {
                     width: 225,
                     height: 225,
                     class: 'image skeleton',
-                    src: 'https://unsplash.it/800',
+                    src: 'https://avatars.dicebear.com/api/jdenticon/pp.svg',
                     onload: (event: Event & { target: Element }) => {
                         event.target.classList.remove('skeleton')
                     }
@@ -39,7 +39,7 @@ export const Me: m.Component = {
 const socials: ISocial[] = [
     {
         name: 'Instagram',
-        iconPath: '/assets/img/ig.png',
+        iconPath: 'assets/img/ig.png',
         link: 'https://www.instagram.com/ppfenning92'
     }, {
         name: 'LinkedIn',

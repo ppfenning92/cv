@@ -9,7 +9,8 @@ import {Profile, Content,
 // import Mithril from "mithril";
 import {EmptyLayout} from "./layouts/empty/empty.component";
 import {FocusLayout} from "./layouts/focus/focus.component";
-import {Me} from "./me/me.component";
+import {Me, Socials} from "./me/me.component";
+import {Social} from "./me/social/social.component";
 
 const root = document.body;
 
@@ -58,7 +59,7 @@ m.route(root, "/", {
         render: (vnode) => m(EmptyLayout, m(Splash, vnode.attrs))
     },
     "/me": {
-        render: (vnode) => m(FocusLayout, m(Me))
+        render: (vnode) => m(FocusLayout, [m(Me), m(Socials)])
     },
     "/cv": {
         render: (vnode) => m(FocusLayout, m('div', '/cv'))
